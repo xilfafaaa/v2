@@ -1,14 +1,14 @@
 <template>
   <div>
       <br><br><br>
-    <br> register <br>
+    <br> <h4>register</h4>  <br>
       <br><br><br>
   <div :model="ruleForm" >
     验证码发送到  {{ ruleForm.email }} 1分钟有效 <br><br>
   </div>
   <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
 
-    <el-form-item label="yzm" prop="yzm">
+    <el-form-item label="验证码" prop="yzm">
       <el-input v-model="ruleForm.yzm"></el-input>
     </el-form-item>
 
@@ -59,7 +59,10 @@ created() {
   this.ruleForm.nickname=this.$route.params.nickname
   this.ruleForm.password=this.$route.params.password
   this.ruleForm.email=this.$route.params.email
-
+  // if (this.ruleForm.email=='') {
+  //   console.log("konggkkkkkkkkk")
+  //   this.$router.push('/register')
+  // }
 
 
   // this.ruleForm=routerParams
@@ -71,22 +74,24 @@ created() {
           const _this = this
           // console.log(formName)
           axios.post('/register2', this.ruleForm).then(res => {
-          //
-          // console.log(res)
+          // console.log(res.data.data)
+
+          if (res.data.data=='验证码错误'){
+            _this.$alert('验证码错误', '提示', {
+              confirmButtonText: '确定',
+            });
+          }
+
           const jwt = res.headers['authorization']
           const userInfo = res.data.data
             // console.log(userInfo)
           // console.log(userInfo)
-          // console.log("userInfo")
           _this.$store.commit("SET_TOKEN", jwt)
           _this.$store.commit("SET_USERINFO", userInfo)
           // console.log(_this.$store.getters.getUser)
-          _this.$router.push('/blogs')
+          // _this.$router.push('/blogs')
           })
-
         } else {
-          // console.log('error submit!!');
-          // return false;
         }
       });
     }
@@ -95,5 +100,7 @@ created() {
 </script>
 
 <style scoped>
-
+  h4{
+    text-align: center;
+  }
 </style>

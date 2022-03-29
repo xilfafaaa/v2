@@ -46,18 +46,17 @@ data() {
     },
 
     rules: {
-
       nickname: [
         { required: true, message: '5-15个字符', trigger: 'blur' },
-        { min: 5, max: 15, message: '昵称', trigger: 'blur' }
+        { min: 5, max: 15, message: '5-15个字符', trigger: 'blur' }
       ],
       username: [
         { required: true, message: '5-15个字符', trigger: 'blur' },
-        { min: 5, max:15, message: 'nameee', trigger: 'blur' }
+        { min: 5, max:15, message: '5-15个字符', trigger: 'blur' }
       ],
       password: [
         { required: true, message: '6-15个字符', trigger: 'blur' },
-        { min: 6, max: 15, message: 'pwddddd', trigger: 'blur' }
+        { min: 6, max: 15, message: '6-15个字符', trigger: 'blur' }
       ],
       email: [
         { required: true, message: 'email', trigger: 'blur' },
