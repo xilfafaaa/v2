@@ -78,6 +78,7 @@ export default {
       this.user.id = this.$store.getters.getUser.id
       this.ruleForm.id = this.$store.getters.getUser.id
       this.user.nickname = this.$store.getters.getUser.nickname
+      this.user.avatar = this.$store.getters.getUser.avatar
       this.hasLogin = true
       // console.log(this.user.id)
       // console.log(this.ruleForm.id)

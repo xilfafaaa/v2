@@ -18,7 +18,8 @@ export default {
       user: {
         username: ' 登录 ',
         nickname: ' 登录 ',
-        avatar: 'http://wx3.sinaimg.cn/mw690/dfcdfe8cly1h009af2ardj20bh0b4t9c.jpg'
+        avatar: '',
+        id:0,
       },
       hasLogin: false
     }
@@ -37,16 +38,20 @@ export default {
     }
   },
   created() {
-    //拦截未登录
-    if (this.$store.getters.getUser.username==null)
+    // console.log(this.$store.getters)
+//拦截未登录
+    if (this.$store.getters.getUser==null)
       this.$router.push('/login')
 
     if(this.$store.getters.getUser.username) {
       this.user.username = this.$store.getters.getUser.username
+      this.user.id = this.$store.getters.getUser.id
       this.user.nickname = this.$store.getters.getUser.nickname
       this.user.avatar = this.$store.getters.getUser.avatar
       this.hasLogin = true
     }
+
+
 
   }
 }
