@@ -85,8 +85,8 @@ methods: {
   },
 },
 created() {
-  //拦截未登录
-  if (this.$store.getters.getUser.username==null)
+//拦截未登录
+  if (this.$store.getters.getUser==null)
     this.$router.push('/login')
 
   if(this.$store.getters.getUser.username) {

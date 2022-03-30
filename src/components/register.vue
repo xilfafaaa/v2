@@ -142,7 +142,7 @@ methods: {
 <style scoped>
   .register{
     align-content: center;
-    /*margin: 0 auto ;*/
+    width: 50%;
   }
   h4{
     text-align: center;

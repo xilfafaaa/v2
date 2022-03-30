@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="register">
       <br><br><br>
     <br> <h4>register</h4>  <br>
       <br><br><br>
@@ -100,6 +100,10 @@ created() {
 </script>
 
 <style scoped>
+.register{
+  align-content: center;
+  width: 50%;
+}
   h4{
     text-align: center;
   }

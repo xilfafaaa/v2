@@ -41,7 +41,7 @@ data() {
     user: {
       username: ' 登录 ',
       nickname: ' 登录 ',
-      avatar: 'http://wx3.sinaimg.cn/mw690/dfcdfe8cly1h009af2ardj20bh0b4t9c.jpg'
+      avatar: 'https://tiebapic.baidu.com/forum/w%3D580%3B/sign=cbc595fbfb096b6381195e583c088544/902397dda144ad349801d55395a20cf430ad85ac.jpg?tbpicau=2022-04-01-05_da2a527a64825fde143402df38957325'
     },
     hasLogin: false
   }

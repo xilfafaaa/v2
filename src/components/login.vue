@@ -89,6 +89,7 @@ export default {
 <style scoped>
   .loginn .demo-ruleForm{
     text-align: center;
+    width: 50%;
   }
   h4{
     text-align: center;
