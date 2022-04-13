@@ -1,7 +1,8 @@
 <template>
-  <div class="register">
-<!--    <skin></skin>-->
-       <br><br><br>
+  <div class="bg">
+<!--    <skin></skin>--><br><br><br><br>
+    <div class="loginn_kuang">
+
     <br>  <h4>注册</h4>
        <br><br><br>
 
@@ -22,11 +23,13 @@
       </el-form-item>
       <el-form-item class="register">
         <el-button type="primary"  @click="submitForm('ruleForm')">获得验证码</el-button>
+        <br>
+        <br>
         <el-button  @click="tologin()">直接去登录</el-button>
       </el-form-item>
     </el-form>
   </div>
-
+  </div>
 </template>
 
 <script>
@@ -116,17 +119,6 @@ methods: {
             }
           })
 
-          // _this.$router.push({
-          //   path:'/registerr',
-          //   query: {
-          //     nickname:this.ruleForm.nickname,
-          //     username:this.ruleForm.username,
-          //     password:this.ruleForm.password,
-          //     email:this.ruleForm.email
-          //   }
-          // })
-
-
         })
 
       } else {
@@ -142,9 +134,28 @@ methods: {
 <style scoped>
   .register{
     align-content: center;
-    width: 50%;
+    /*padding-left: -5%;*/
+    /*padding-right: 10%;*/
+  }
+  .loginn_kuang{
+    /*width: 10%;*/
+    text-align: center;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-left: 24%;
+    width:50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius:30px;
+  }
+  .bg{
+    text-align: center;
+    height: 100vh;
+    margin: -11px -7px -7px -10px;
+    background-image:url('../assets/img3.jpg');
   }
   h4{
     text-align: center;
+    padding-left: 12%;
   }
 </style>

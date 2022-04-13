@@ -2,13 +2,13 @@
   <div class="mcontaner">
     <Header></Header>
     <div class="title">
-      <h1>blogs list</h1>
+      <h1>所有记录</h1>
     </div>
 
     <div class="block">
       <el-timeline>
         <el-timeline-item v-bind:timestamp="blog.created" placement="top" v-for="blog in blogs">
-          <el-card>
+          <el-card class="cardd">
             <h3 class="h33">
               <router-link :to="{name: 'blogdetail', params: {blogId: blog.id}}">
                 {{blog.title}}
@@ -19,16 +19,16 @@
         </el-timeline-item>
       </el-timeline>
     </div>
-
-    <el-pagination class="mpage"
-                   background
-                   layout="prev, pager, next"
-                   :current-page="currentPage"
-                   :page-size="pageSize"
-                   :total="total"
-                   @current-change=page>
-    </el-pagination>
-
+    <div class="page">
+      <el-pagination class="mpage"
+                     background
+                     layout="prev, pager, next"
+                     :current-page="currentPage"
+                     :page-size="pageSize"
+                     :total="total"
+                     @current-change=page>
+      </el-pagination>
+    </div>
   </div>
 </template>
 
@@ -89,6 +89,23 @@ export default {
   a:link{
     color: #000000;
     text-decoration:none;
+  }
+  .cardd {
+    background-color: rgba(255, 255, 255, 0.5);
+
+  }
+  .mcontaner{
+    /*background-color: #eec0c0;*/
+    background-image:url('../assets/img4.jpg');
+    margin: -10px -7px -8px -10px;
+    height: 126vh;
+    color: #eeeeee;
+  }
+  .page{
+    /*position: sticky;*/
+    /*top: calc(100% - 80px);*/
+    /*height: 80px;*/
+    text-align: center;
   }
 
 </style>

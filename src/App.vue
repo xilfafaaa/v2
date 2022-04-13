@@ -19,8 +19,11 @@ export default {
   /*font-family: Deng;*/
   color: #000000;
   /*text-align: center;*/
-  margin:0 auto;
+  /*margin:0 auto;*/
   width: 100%;
+  background-image:url('./assets/img4.jpg');
+  margin: -10px -7px -8px -10px;
+  height: 100vh;
 }
 
 </style>

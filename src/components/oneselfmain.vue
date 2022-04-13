@@ -74,8 +74,7 @@ methods: {
   initinfo(user) {
       const _this = this
       this.userr.username=this.user.username
-      axios.get("/user/maindetail/" + this.user.username).then(res => {
-        // console.log(res.data.data)
+      axios.get("/user/maindetail/" + this.user.id).then(res => {
         let str=res.data.data.created
         str= str.substring(0,10)
         _this.userr.blogscounts=res.data.data.blogscounts
@@ -90,6 +89,8 @@ created() {
     this.$router.push('/login')
 
   if(this.$store.getters.getUser.username) {
+
+    this.user.id = this.$store.getters.getUser.id
     this.user.username = this.$store.getters.getUser.username
     this.user.nickname = this.$store.getters.getUser.nickname
     this.user.avatar = this.$store.getters.getUser.avatar

@@ -1,23 +1,28 @@
 <template>
-  <div class="register">
-      <br><br><br>
-    <br> <h4>register</h4>  <br>
-      <br><br><br>
-  <div :model="ruleForm" >
-    验证码发送到  {{ ruleForm.email }} 1分钟有效 <br><br>
+  <div class="bg">
+    <br><br><br>
+    <br><br><br>
+    <div class="loginn_kuang">
+
+        <br> <h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        验证码</h4>  <br>
+      <br>
+      <div :model="ruleForm" >
+        验证码发送到  {{ ruleForm.email }} 1分钟有效 <br><br><br><br>
+      </div>
+
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+
+        <el-form-item label="验证码" prop="yzm">
+          <el-input v-model="ruleForm.yzm"></el-input>
+        </el-form-item>
+
+        <el-form-item class="register">
+          <el-button type="primary"  @click="submitForm('ruleForm')">验证邮箱验证码</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
   </div>
-  <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-
-    <el-form-item label="验证码" prop="yzm">
-      <el-input v-model="ruleForm.yzm"></el-input>
-    </el-form-item>
-
-    <el-form-item class="register">
-      <el-button type="primary"  @click="submitForm('ruleForm')">验证邮箱验证码</el-button>
-    </el-form-item>
-  </el-form>
-  </div>
-
 </template>
 
 <script>
@@ -43,18 +48,6 @@ export default {
     }
   },
 created() {
-  // console.log(this.$route.query.email)
-  // console.log(this.ruleForm.email)
-  // this.ruleForm.username=this.$route.query.username
-  // this.ruleForm.nickname=this.$route.query.nickname
-  // this.ruleForm.password=this.$route.query.password
-  // this.ruleForm.email=this.$route.query.email
-  // if (this.$route.query.username==null) {
-  //   console.log("konggkkkkkkkkk")
-  //   this.$router.push('/register')
-  // }
-  //
-  // console.log(this.$route.params)
   this.ruleForm.username=this.$route.params.username
   this.ruleForm.nickname=this.$route.params.nickname
   this.ruleForm.password=this.$route.params.password
@@ -63,9 +56,6 @@ created() {
   //   console.log("konggkkkkkkkkk")
   //   this.$router.push('/register')
   // }
-
-
-  // this.ruleForm=routerParams
 },
   methods: {
     submitForm(formName) {
@@ -100,10 +90,28 @@ created() {
 </script>
 
 <style scoped>
-.register{
-  align-content: center;
-  width: 50%;
-}
+  .register{
+    align-content: center;
+    /*width: 50%;*/
+    /*padding-left: 24%;*/
+  }
+  .loginn_kuang{
+    /*width: 10%;*/
+    text-align: center;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin-left: 24%;
+    width:50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius:30px;
+  }
+  .bg{
+    text-align: center;
+    height: 100vh;
+    margin: -11px -7px -7px -10px;
+    background-image:url('../assets/img3.jpg');
+  }
   h4{
     text-align: center;
   }

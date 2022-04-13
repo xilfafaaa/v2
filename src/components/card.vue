@@ -1,7 +1,7 @@
 <template>
   <div>
 <!--    <oneselfHeader></oneselfHeader>-->
-    <h1>卡片</h1>
+    <h1>抽奖</h1>
     已经抽取的次数:  {{userc.allcount }}<br>
     现在有的次数:  {{userc.drawcount }}<br>
     sss:  {{userc.sss }}<br>

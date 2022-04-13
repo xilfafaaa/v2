@@ -114,7 +114,7 @@ Vue.use(Router)
         },
         {
           path:"/card",
-          name:"卡片",
+          name:"抽奖",
           component:card
         },
 

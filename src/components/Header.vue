@@ -72,12 +72,15 @@ import axios from "axios";
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 12px;
+    color: #ffffff;
+    text-shadow: 0 0 6px,#000;
   }
   .maction {
     margin: 10px 0;
   }
   .headtext{
-    color: #7b00ff;
+    color: #ffffff;
   }
 
 </style>

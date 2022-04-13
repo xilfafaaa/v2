@@ -106,5 +106,6 @@ export default {
 <style scoped>
   .m-content {
     text-align: center;
+    width:94%;
   }
 </style>

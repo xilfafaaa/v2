@@ -2,19 +2,22 @@
   <div>
 
     <Header></Header>
+    <h2 class="h22"> {{ blog.title }}</h2>
     <div class="mblog">
-      <h1>detail</h1>
-      <hr>
-
-      <h2> {{ blog.title }}</h2>
+      <br>
+      摘要：
+        <h3> {{ blog.description }}</h3>
+      <el-divider></el-divider>
+      正文：
       <el-link icon="el-icon-edit" v-if="ownBlog">
+
         <router-link :to="{name: 'blogedit', params: {blogId: blog.id}}" >
           编辑
         </router-link>
       </el-link>
 
       <div class="markdown-body" v-html="blog.content"></div>
-
+      <br>
       <el-divider></el-divider>
       <br>
       <el-popover v-if="ownBlog" :model="blog"  ref="blog"
@@ -28,6 +31,7 @@
           <el-button type="primary" size="mini" @click="delblog('blog')">确定</el-button>
         </div>
         <el-button slot="reference">删除</el-button>
+        <br><br>
       </el-popover>
 
     </div>
@@ -80,6 +84,7 @@ export default {
     this.axios.get('/blog/detail/' + blogId).then(res => {
       const blog = res.data.data
       _this.blog.id = blog.id
+      _this.blog.description = blog.description
       _this.blog.title = blog.title
 
       const MardownIt = require("markdown-it");
@@ -94,11 +99,25 @@ export default {
 </script>
 
 <style scoped>
-  .mblog{
+  .h22{
     text-align: center;
+    color: white;
+  }
+  .mblog{
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(201, 201, 201, 0.55);
+    width: 90%;
+    border-radius:20px;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .zhengwen{
+
   }
   .markdown-body{
     text-align: left;
+    background-color: rgba(0,0,0,0);
   }
   .button1{
     background-color: #fff;

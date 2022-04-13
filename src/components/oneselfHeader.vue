@@ -1,8 +1,8 @@
 <template>
   <div class="oneselfhead">
     <div >
-      <el-container style="height:800px; border: 1px solid #eee ">
-        <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+      <el-container style="height:100vh ; border: 1px solid #eee ">
+        <el-aside width="200px" style="background-color: rgb(238, 241, 246) ">
 
           <el-menu >
             <el-menu-item v-show="hasLogin" @click="toindex()">去首页</el-menu-item>
@@ -94,5 +94,10 @@ created() {
   .el-aside {
     color: #333;
   }
-
+  .oneselfhead{
+    height: 100vh;
+    padding:-5px;
+    margin: -10px -7px -8px -10px;
+    background-color: #ffffff;
+  }
 </style>
