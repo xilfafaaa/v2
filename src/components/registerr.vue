@@ -70,6 +70,7 @@ created() {
             _this.$alert('验证码错误', '提示', {
               confirmButtonText: '确定',
             });
+            return;
           }
 
           const jwt = res.headers['authorization']
@@ -79,7 +80,7 @@ created() {
           _this.$store.commit("SET_TOKEN", jwt)
           _this.$store.commit("SET_USERINFO", userInfo)
           // console.log(_this.$store.getters.getUser)
-          // _this.$router.push('/blogs')
+          _this.$router.push('/blogs')
           })
         } else {
         }

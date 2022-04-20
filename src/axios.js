@@ -4,8 +4,8 @@ import router from './router'
 import store from './store'
 
 
-axios.defaults.baseURL = "http://127.0.0.1:8082"
-// axios.defaults.baseURL = "http://124.222.173.251:8082"
+// axios.defaults.baseURL = "http://127.0.0.1:8082"
+axios.defaults.baseURL = "http://42.192.229.75:8082"
 
 // 前置拦截
 axios.interceptors.request.use(config => {
