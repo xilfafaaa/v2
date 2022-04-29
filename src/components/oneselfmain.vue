@@ -7,7 +7,7 @@
       <div>{{ user.nickname }}</div>
     </div>
     <br>
-
+    
     <br>
     用户名:  {{user.username}}
     <br><br>
@@ -17,9 +17,9 @@
     <br>
     <br>
     <br>
-    <el-button @click="changenickname()">修改昵称</el-button>
+    <el-button round @click="changenickname()">修改昵称</el-button>
     <br><br>
-    <el-button @click="changepsd()">修改密码</el-button>
+    <el-button round @click="changepsd()">修改密码</el-button>
 
     <br>
 

@@ -4,21 +4,20 @@
     <br><br><br>
     <div class="loginn_kuang">
 
-        <br> <h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br> <h4>&nbsp;&nbsp;
         验证码</h4>  <br>
-      <br>
       <div :model="ruleForm" >
-        验证码发送到  {{ ruleForm.email }} 1分钟有效 <br><br><br><br>
+        验证码发送到  {{ ruleForm.email }} 1分钟有效 <br><br>
       </div>
 
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
 
-        <el-form-item label="验证码" prop="yzm">
+        <el-form-item style="margin-left:-5px;" label="输入验证码" prop="yzm">
           <el-input v-model="ruleForm.yzm"></el-input>
         </el-form-item>
 
         <el-form-item class="register">
-          <el-button type="primary"  @click="submitForm('ruleForm')">验证邮箱验证码</el-button>
+          <el-button type="primary" style="margin-left:-75px;" round @click="submitForm('ruleForm')">验证邮箱验证码</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -99,10 +98,12 @@ created() {
   .loginn_kuang{
     /*width: 10%;*/
     text-align: center;
-    padding-right: 5%;
-    padding-top: 2%;
+    margin-top:10%;
+    padding-right: 15%;
+    padding-left: 10%;
+    padding-top: 5%;
     padding-bottom: 1%;
-    margin-left: 24%;
+    margin-left: 15%;
     width:50%;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius:30px;

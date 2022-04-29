@@ -7,7 +7,7 @@
       border
       style="width: 100%">
       <el-table-column
-        fixed prop="title" label="标题" width="250">
+        fixed prop="title" label="标题" width="20">
       </el-table-column>
       <el-table-column
         prop="description" label="描述">
@@ -24,7 +24,7 @@
                         placement="top"
                         width="160"
                         >
-              <el-button @click="todetail(scope.row.id)"  slot="reference">查看详情</el-button>
+              <el-button style="margin-left:100px;" type="primary" plain round @click="todetail(scope.row.id)"  slot="reference">详情</el-button>
             </el-popover>
 
 <!--          <el-button @click="todetail(scope.row.id)" type="text" size="small">查看详情</el-button>-->
@@ -36,10 +36,10 @@
                          >
               <p>确认删除吗</p>
               <div style="text-align: right; margin: 0">
-                <el-button size="mini" type="text" @click="visible = false">取消</el-button>
-                <el-button type="primary" size="mini" @click="del(scope.row.id)">确定</el-button>
+                <el-button round size="mini" type="text" @click="visible = false">取消</el-button>
+                <el-button round type="primary" size="mini" @click="del(scope.row.id)">确定</el-button>
               </div>
-              <el-button slot="reference">删除</el-button>
+              <el-button style="margin-right:1px;" round slot="reference">删除</el-button>
             </el-popover>
 
 

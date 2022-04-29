@@ -3,8 +3,9 @@
 <!--    <skin></skin>--><br><br><br><br>
     <div class="loginn_kuang">
 
-    <br>  <h4>注册</h4>
-       <br><br><br>
+    <br>  
+    <h4>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</h4>
+       <br>
 
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
 
@@ -22,10 +23,9 @@
         <el-input v-model="ruleForm.email"></el-input>
       </el-form-item>
       <el-form-item class="register">
-        <el-button type="primary"  @click="submitForm('ruleForm')">获得验证码</el-button>
+        <el-button type="info" style="margin-left:50px;" round @click="submitForm('ruleForm')">获得验证码</el-button>
         <br>
-        <br>
-        <el-button  @click="tologin()">直接去登录</el-button>
+        <el-button type="primary" style="margin-left:-20px;margin-top:10px;" round @click="tologin()">直接去登录</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -140,18 +140,22 @@ methods: {
   .loginn_kuang{
     /*width: 10%;*/
     text-align: center;
-    padding-right: 5%;
-    padding-top: 2%;
+    padding-right: 16%;
+    padding-left: 1%;
+    padding-top: 0%;
     padding-bottom: 1%;
-    margin-left: 24%;
+    margin-left: 19%;
+    margin-top:50px;
     width:50%;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius:30px;
+    border-radius:40px;
   }
   .bg{
     text-align: center;
     height: 100vh;
     margin: -11px -7px -7px -10px;
+    height: 110%;
+    width:110%;
     background-image:url('../assets/img3.jpg');
   }
   h4{
