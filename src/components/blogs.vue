@@ -76,7 +76,7 @@ export default {
     text-align: center;
   }
   .block{
-    width: 98%;
+    width: 90%;
   }
   .mpage {
     margin: 0 auto;
@@ -97,8 +97,10 @@ export default {
   .mcontaner{
     /*background-color: #eec0c0;*/
     background-image:url('../assets/img4.jpg');
+    width: 110%;
+    /*background: #f2f2f2;*/
     margin: -10px -7px -8px -10px;
-    height: 126vh;
+    height: 150%;
     color: #eeeeee;
   }
   .page{

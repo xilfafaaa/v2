@@ -92,7 +92,7 @@ created() {
   }
 
   .el-aside {
-    color: #333;
+    color: rgb(180, 170, 170);
   }
   .oneselfhead{
     height: 100vh;

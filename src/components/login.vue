@@ -7,7 +7,7 @@
     <br>
     <div class="loginn_kuang">
       <h4>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         登录
       </h4>
       <el-form  :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
@@ -18,13 +18,20 @@
         <el-form-item label="密码"  prop="password">
           <el-input type="password" v-model="ruleForm.password"></el-input>
         </el-form-item>
+        
+      <el-button-group style="margin-bottom:20px;margin-left:50px;">
+        <el-button   type="primary" round @click="submitForm('ruleForm')">登录</el-button>
+        <el-button  round @click="resetForm('ruleForm')">重置</el-button>
+      </el-button-group>
 
         <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
-          <el-button @click="resetForm('ruleForm')">重置</el-button>
-          <br>
-          <br>
-          <el-button @click="toregister()">注册</el-button>
+          <div id="hhh1">
+          </div>
+          <div id="hhh2">
+          </div>
+          <div id="hhh3">
+          <el-button style="margin-top:2px;margin-right:40px;" round @click="toregister()">注册</el-button>
+          </div>
         </el-form-item>
       </el-form>
     </div>
@@ -91,7 +98,8 @@ export default {
 <style scoped>
   .loginn {
     text-align: center;
-    height: 100vh;
+    height: 110%;
+    width:110%;
     margin: -11px -7px -7px -10px;
     background-image:url('../assets/img2.jpg');
     /*background-repeat:no-repeat;*/
@@ -99,15 +107,33 @@ export default {
   .loginn_kuang{
     /*width: 10%;*/
     text-align: center;
-    padding-right: 8%;
+    padding-right: 15%;
     padding-top: 2%;
     padding-bottom: 1%;
-    margin-left: 24%;
-    width:50%;
+    padding-left:1%;
+    margin-left: 12%;
+    margin-top:50px;
+    width:65%;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius:30px;
+    border-radius:25px;
   }
   h4{
     text-align: center;
   }
+
+   .el-form-item label:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+
+    .el-message-box__btns .el-button:first-child {
+  transform: translateX(66px);
+}
+.el-message-box__btns .el-button:last-child {
+  transform: translateX(-66px);
+}
+   
+    
+
 </style>

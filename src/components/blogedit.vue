@@ -5,21 +5,21 @@
     <div class="m-content">
 
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-        <el-form-item label="标题" prop="title">
+        <el-form-item style="margin-right:50px;" label="标题" prop="title">
           <el-input v-model="ruleForm.title"></el-input>
         </el-form-item>
 
-        <el-form-item label="摘要" prop="description">
+        <el-form-item label="摘要" style="margin-right:50px;" prop="description">
           <el-input type="textarea" v-model="ruleForm.description"></el-input>
         </el-form-item>
 
-        <el-form-item label="内容" prop="content">
+        <el-form-item label="内容" style="margin-right:50px;" prop="content">
           <mavon-editor v-model="ruleForm.content"></mavon-editor>
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
-          <el-button @click="resetForm('ruleForm')">重置</el-button>
+          <el-button type="primary" style="margin-left:-60px;" round @click="submitForm('ruleForm')">发表</el-button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <el-button round @click="resetForm('ruleForm')">重置</el-button>
         </el-form-item>
       </el-form>
 
@@ -106,6 +106,6 @@ export default {
 <style scoped>
   .m-content {
     text-align: center;
-    width:94%;
+    width:88%;
   }
 </style>

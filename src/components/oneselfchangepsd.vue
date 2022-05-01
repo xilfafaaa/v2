@@ -3,12 +3,12 @@
     <h4>更改密码</h4>
     <br>
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="密码"  prop="password">
+      <el-form-item style="margin-left:-40px;" label="密码"  prop="password">
         <el-input type="password" v-model="ruleForm.password"></el-input>
       </el-form-item>
       <br>
       <el-form-item class="c">
-        <el-button @click="submitForm('ruleForm')">更改密码</el-button>
+        <el-button type="primary" plain style="margin-left:-50px;" round @click="submitForm('ruleForm')">更改密码</el-button>
       </el-form-item>
     </el-form>
 

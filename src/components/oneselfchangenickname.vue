@@ -3,12 +3,12 @@
     <h4>更改昵称</h4>
     <br>
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-      <el-form-item label="昵称" prop="nickname">
+      <el-form-item style="margin-left:-40px;" label="昵称" prop="nickname">
         <el-input v-model="ruleForm.nickname"></el-input>
       </el-form-item>
       <br>
       <el-form-item class="c">
-        <el-button @click="submitForm('ruleForm')">更改昵称</el-button>
+        <el-button type="primary" plain style="margin-left:-50px;" round @click="submitForm('ruleForm')">更改昵称</el-button>
       </el-form-item>
     </el-form>
   </div>

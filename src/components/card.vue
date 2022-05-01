@@ -3,25 +3,21 @@
 <!--    <oneselfHeader></oneselfHeader>-->
     <h1>抽奖</h1>
     已经抽取的次数:  {{userc.allcount }}<br>
-    现在有的次数:  {{userc.drawcount }}<br>
-    sss:  {{userc.sss }}<br>
-    ss:  {{userc.ss }}<br>
-    s:  {{userc.s}}<br>
-    a:  {{userc.a}}<br>
-    b:  {{userc.b}}<br>
-    c:  {{userc.c}}<br>
-    d:  {{userc.d}}<br>
+    现在拥有的次数:  {{userc.drawcount }}<br>
+    特等奖:  {{userc.sss }}<br>
+    一等奖:  {{userc.ss }}<br>
+    二等奖:  {{userc.s}}<br>
+    三等奖:  {{userc.a}}<br>
+    四等奖:  {{userc.b}}<br>
+    优秀奖:  {{userc.c}}<br>
+    参与奖:  {{userc.d}}<br>
 <!--    {{user.id}}-->
     <br><br>
-    <el-button @click="drawn(user,1)">抽取1</el-button>
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    <el-button @click="drawn(user,10)">抽取10</el-button>
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    <el-button @click="drawn(user,30)">抽取30</el-button>
+    <el-button style="margin-left:35px;" type="info" plain round @click="drawn(user,1)">抽取1次</el-button>
+    <br><br>
+    <el-button style="margin-left:33px;" type="info" plain round @click="drawn(user,10)">抽取10次</el-button>
+    <br><br>
+    <el-button style="margin-left:33px;" type="info" plain round @click="drawn(user,30)">抽取30次</el-button>
   </div>
 </template>
 
