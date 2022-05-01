@@ -61,8 +61,6 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           const _this = this
-          // console.log(formName)
-          // axios.post('http://localhost:8080/login', this.ruleForm).then(res => {
           axios.post('/login', this.ruleForm).then(res => {
 
             const jwt = res.headers['authorization']
@@ -76,15 +74,33 @@ export default {
           })
 
         } else {
-          // console.log('vvvvv');
           return false;
         }
       });
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();
+    },
+
+    _isMobile() {
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag;
     }
-  }
+
+
+  },
+
+  // created(){
+  //   if (this._isMobile()) {
+  //     alert("手机端");
+  //     // this.$router.replace('/m_index');
+  //   } else {
+  //     alert("pc端");
+  //     // this.$router.replace('/pc_index');
+  //   }
+  // }
+
+
 }
 </script>
 

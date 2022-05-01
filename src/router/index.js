@@ -17,6 +17,13 @@ import oneselfHeader from "../components/oneselfHeader";
 import oneselfmain from "../components/oneselfmain";
 import oneselfchangenickname from "../components/oneselfchangenickname";
 import oneselfchangepsd from "../components/oneselfchangepsd";
+import friendAllFriend from "../components/friend/friendAllFriend";
+import friend from "../components/friend/friend";
+import friendRequest from "../components/friend/friendRequest";
+import friendFindFriend from "../components/friend/friendFindFriend";
+
+
+
 Vue.use(Router)
   const routes= [
     {
@@ -95,31 +102,65 @@ Vue.use(Router)
         {
           path:"/selff",
           name:"概览",
-          component:oneselfmain
+          component:oneselfmain,
+          show:true,
         },
         {
           path:"/changenickname",
           name:"更改昵称",
-          component:oneselfchangenickname
+          component:oneselfchangenickname,
+          show:true,
         },
         {
           path:"/changepsd",
           name:"更改密码",
-          component:oneselfchangepsd
+          component:oneselfchangepsd,
+          show:true,
         },
         {
           path:"/bloglist",
           name:"发表的记录列表",
-          component:onselfbloglist
+          component:onselfbloglist,
+          show:true,
         },
         {
           path:"/card",
           name:"抽奖",
-          component:card
+          component:card,
+          show:true,
         },
+        {
+          path: "/friend",
+          name:"好友",
+          component: friendAllFriend,
+          show:true,
+        },
+        {
+          path:'/allfriend',
+          name:'所有好友',
+          component:friendAllFriend,
+          show:false,
+        },
+        {
+          path: '/allrequest',
+          name: '查看请求',
+          component: friendRequest,
+          show:false,
+        },
+        {
+          path: '/addfriend',
+          name: '添加好友',
+          component: friendFindFriend,
+          show:false,
+        },
+
+
+
+
 
       ]
     },
+
     {
       path:'/card',
       component:card,

@@ -77,11 +77,12 @@ export default {
           ,{dangerouslyUseHTMLString:true}, {
           confirmButtonText: '确定',
           callback: action => {
-          }
+          },
         });
+          this.show()
         }
       })
-      this.show()
+
     },
     show(){
       const _this = this

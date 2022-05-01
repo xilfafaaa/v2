@@ -12,9 +12,13 @@
           <!--          <el-menu  router :default-openeds="['0', '1']">-->
           <el-menu  router  >
             <el-submenu v-for="(item,index) in $router.options.routes" :index="index+''" v-if="item.show">
+
               <template slot="title">{{item.name}}</template>
+
               <el-menu-item v-for="(item2,index2) in item.children" :index="item2.path"
-                            :class="$route.path==item2.path?'is-active':''">{{item2.name}}</el-menu-item>
+                            :class="$route.path==item2.path?'is-active':''" v-if="item2.show">{{item2.name}}
+              </el-menu-item>
+
             </el-submenu>
           </el-menu>
 
