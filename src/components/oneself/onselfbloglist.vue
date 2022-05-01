@@ -98,7 +98,7 @@ export default {
     page(currentPage) {
       const _this = this
       axios.get('/oneself/allblogs/' + this.user.id + '/' + currentPage).then(res => {
-        // console.log(res)
+        console.log(res.data.data)
         _this.tableData = res.data.data.records
         _this.currentPage = res.data.data.current
         _this.total = res.data.data.total

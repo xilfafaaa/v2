@@ -54,7 +54,7 @@
 
       <el-dialog title="验证信息" :modal="false"  :visible.sync="dialogFormVisible">
         <el-form :model="fDTO">
-          <el-form-item label="活动名称"  :label-width="formLabelWidth">
+          <el-form-item label=" "  :label-width="formLabelWidth">
             <el-input v-model="fDTO.message" ></el-input>
           </el-form-item>
         </el-form>
@@ -129,19 +129,7 @@ export default {
         cohesion:0,
 
       },
-      friends: [{
-      //   message:'',
-      //   recId: '',
-      //   sendAvatar: '',
-      //   sendId:0,
-      //   sendNickname:0,
-      // }, {
-      //   message:'',
-      //   recId: '',
-      //   sendAvatar: '',
-      //   sendId:0,
-      //   sendNickname:0,
-      }]
+      friends: {},
 
     }
   },
@@ -165,14 +153,13 @@ export default {
         });
       });
 
-
     },
     find(currentPage) {
       if(this.ruleForm.nickname==='')
         return;
       const _this = this
       axios.get('/friend/findfriend/' + this.ruleForm.nickname+ '/'+ currentPage ).then(res => {
-        // console.log(res)
+        // console.log(res.data.data)
         _this.friends = res.data.data.records
         _this.currentPage = res.data.data.current
         _this.total = res.data.data.total

@@ -6,17 +6,17 @@ import blogedit from "../components/blogedit";
 import blogdetail from "../components/blogdetail";
 import register from "../components/register";
 import registerr from "../components/registerr";
-import oneself from "../components/oneself";
+import oneself from "../components/oneself/oneself";
 
 
 import el from "element-ui/src/locale/lang/el";
 import axios from "axios";
-import card from "../components/card";
-import onselfbloglist from "../components/onselfbloglist";
-import oneselfHeader from "../components/oneselfHeader";
-import oneselfmain from "../components/oneselfmain";
-import oneselfchangenickname from "../components/oneselfchangenickname";
-import oneselfchangepsd from "../components/oneselfchangepsd";
+import card from "../components/oneself/card";
+import onselfbloglist from "../components/oneself/onselfbloglist";
+import oneselfHeader from "../components/oneself/oneselfHeader";
+import oneselfmain from "../components/oneself/oneselfmain";
+import oneselfchangenickname from "../components/oneself/oneselfchangenickname";
+import oneselfchangepsd from "../components/oneself/oneselfchangepsd";
 import friendAllFriend from "../components/friend/friendAllFriend";
 import friend from "../components/friend/friend";
 import friendRequest from "../components/friend/friendRequest";
@@ -90,8 +90,6 @@ Vue.use(Router)
       name:'card',
       component:card
     },
-
-
     {
       path:"/self",
       name:"个人中心",
@@ -153,6 +151,31 @@ Vue.use(Router)
           component: friendFindFriend,
           show:false,
         },
+        {
+          path:"/friend",
+          name:"查看好友",
+          component:friendAllFriend,
+          show:true,
+        },
+        {
+          path:"/allfriend",
+          name:"查看好友",
+          component:friendAllFriend,
+          show:false,
+        },
+        {
+          path:"/friendrequest",
+          name:"好友请求",
+          component:friendRequest,
+          show:false,
+        },
+        {
+          path:"/findfriend",
+          name:"好友请求",
+          component:friendFindFriend,
+          show:false,
+        },
+
 
 
 
