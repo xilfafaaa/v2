@@ -20,6 +20,8 @@
       <span v-show="hasLogin"><el-link class="headtext" type="danger" @click="logout">退出</el-link></span>
     </div>
 
+<!--    <div class="asd">asd</div>-->
+
   </div>
 </template>
 
@@ -82,5 +84,10 @@ import axios from "axios";
   .headtext{
     color: #ffffff;
   }
-
+  .asd{
+    /*z-index: 2;*/
+    position: absolute;
+    top: 80px;
+    right: 200px;
+  }
 </style>

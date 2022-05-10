@@ -18,12 +18,8 @@ import oneselfmain from "../components/oneself/oneselfmain";
 import oneselfchangenickname from "../components/oneself/oneselfchangenickname";
 import oneselfchangepsd from "../components/oneself/oneselfchangepsd";
 import friendAllFriend from "../components/friend/friendAllFriend";
-import friend from "../components/friend/friend";
 import friendRequest from "../components/friend/friendRequest";
 import friendFindFriend from "../components/friend/friendFindFriend";
-
-
-
 Vue.use(Router)
   const routes= [
     {
@@ -108,6 +104,7 @@ Vue.use(Router)
           name:"更改昵称",
           component:oneselfchangenickname,
           show:true,
+
         },
         {
           path:"/changepsd",
@@ -126,30 +123,6 @@ Vue.use(Router)
           name:"抽奖",
           component:card,
           show:true,
-        },
-        {
-          path: "/friend",
-          name:"好友",
-          component: friendAllFriend,
-          show:true,
-        },
-        {
-          path:'/allfriend',
-          name:'所有好友',
-          component:friendAllFriend,
-          show:false,
-        },
-        {
-          path: '/allrequest',
-          name: '查看请求',
-          component: friendRequest,
-          show:false,
-        },
-        {
-          path: '/addfriend',
-          name: '添加好友',
-          component: friendFindFriend,
-          show:false,
         },
         {
           path:"/friend",
@@ -171,19 +144,14 @@ Vue.use(Router)
         },
         {
           path:"/findfriend",
-          name:"好友请求",
+          name:"搜索好友",
           component:friendFindFriend,
           show:false,
         },
 
 
-
-
-
-
       ]
     },
-
     {
       path:'/card',
       component:card,
