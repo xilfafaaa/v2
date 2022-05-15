@@ -8,7 +8,9 @@
     </div>
     <span v-show="hasLogin"><el-link class="headtext" type="primary" href="/selff">个人中心</el-link></span>
     <div class="maction">
-      <span><el-link class="headtext" href="/blogs">主页</el-link></span>
+      <span><el-link class="headtext" href="/blogs">博客主页</el-link></span>
+      <el-divider direction="vertical"></el-divider>
+      <span><el-link class="headtext" href="/moyurecord">摸鱼记录</el-link></span>
       <el-divider direction="vertical"></el-divider>
       <span><el-link class="headtext" type="success" href="/blogs/add">发表博客</el-link></span>
       <el-divider direction="vertical"></el-divider>

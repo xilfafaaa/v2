@@ -20,6 +20,7 @@ import oneselfchangepsd from "../components/oneself/oneselfchangepsd";
 import friendAllFriend from "../components/friend/friendAllFriend";
 import friendRequest from "../components/friend/friendRequest";
 import friendFindFriend from "../components/friend/friendFindFriend";
+import moyu from "../components/moyu/moyu"
 Vue.use(Router)
   const routes= [
     {
@@ -86,6 +87,13 @@ Vue.use(Router)
       name:'card',
       component:card
     },
+
+    {
+      path:'/moyurecord',
+      name:'moyurecord',
+      component:moyu
+    },
+
     {
       path:"/self",
       name:"个人中心",
