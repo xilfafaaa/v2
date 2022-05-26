@@ -21,6 +21,7 @@ import friendAllFriend from "../components/friend/friendAllFriend";
 import friendRequest from "../components/friend/friendRequest";
 import friendFindFriend from "../components/friend/friendFindFriend";
 import moyu from "../components/moyu/moyu"
+import oneselfchangeavatar from "../components/oneself/oneselfchangeavatar";
 Vue.use(Router)
   const routes= [
     {
@@ -112,7 +113,12 @@ Vue.use(Router)
           name:"更改昵称",
           component:oneselfchangenickname,
           show:true,
-
+        },
+        {
+          path:"/changeavatar",
+          name:"更改头像",
+          component:oneselfchangeavatar,
+          show:true,
         },
         {
           path:"/changepsd",
